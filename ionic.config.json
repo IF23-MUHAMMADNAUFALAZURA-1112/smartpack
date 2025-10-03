@@ -1,0 +1,7 @@
+{
+  "name": "project-kpsmt5",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
