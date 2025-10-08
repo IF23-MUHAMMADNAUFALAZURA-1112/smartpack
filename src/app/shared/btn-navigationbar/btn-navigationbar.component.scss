@@ -1,0 +1,16 @@
+ion-tab-bar {
+  --background: #fff;
+  height: 60px;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+ion-tab-button ion-icon,
+ion-tab-button ion-label {
+  color: #666;
+  transition: color 0.2s ease;
+}
+
+ion-tab-button.tab-selected ion-icon,
+ion-tab-button.tab-selected ion-label {
+  color: #1F3A64 !important; /* biru navy */
+}

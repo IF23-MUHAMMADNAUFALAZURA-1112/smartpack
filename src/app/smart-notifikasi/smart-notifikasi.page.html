@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar class="custom-toolbar">
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()" fill="clear">
+        <ion-icon name="arrow-back-outline" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="header-title">NOTIFIKASI</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="notification-content">
+  <!-- Bar Aksi Saat Mode Seleksi Aktif -->
+  <div *ngIf="selectionMode" class="selection-bar">
+    <ion-button fill="clear" color="success" (click)="markSelectedAsRead()">Tandai Dibaca</ion-button>
+    <ion-button fill="clear" color="danger" (click)="deleteSelected()">Hapus</ion-button>
+    <ion-button fill="clear" color="medium" (click)="cancelSelection()">Batal</ion-button>
+  </div>
+
+  <!-- Daftar Notifikasi -->
+  <ion-list>
+    <ion-item
+      *ngFor="let notif of notifications"
+      [ngClass]="{ selected: notif.selected, read: notif.read }"
+      (mousedown)="startPress(notif)"
+      (touchstart)="startPress(notif)"
+      (mouseup)="cancelPress()"
+      (mouseleave)="cancelPress()"
+      (touchend)="cancelPress()"
+      (click)="toggleSelection(notif)"
+      lines="none"
+      class="notif-item"
+    >
+      <ion-label>
+        <h2 class="notif-title">{{ notif.title }}</h2>
+        <p class="notif-message">{{ notif.message }}</p>
+        <small class="notif-time">{{ notif.time | date: 'dd MMM yyyy, HH:mm' }}</small>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- Jika Tidak Ada Notifikasi -->
+  <div *ngIf="notifications.length === 0" class="empty-state">
+    <ion-icon name="notifications-off-outline" color="medium"></ion-icon>
+    <p>Tidak ada notifikasi</p>
+  </div>
+</ion-content>

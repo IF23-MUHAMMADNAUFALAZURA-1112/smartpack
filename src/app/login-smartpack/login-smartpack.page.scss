@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+* {
+  font-family: 'Archivo Black', sans-serif !important;
+}
+
+/* Tombol kembali */
+.btn-back {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  z-index: 999;
+  font-size: 26px;
+  color: white;
+  background: transparent;
+}
+
+/* Background layar utama */
+ion-content.login-background {
+  --background: #1F3A64;
+  padding: 0;
+  position: relative;
+}
+
+/* Spinner login */
+.login-spinner {
+  width: 20px;
+  height: 20px;
+}
+
+/* Wrapper konten */
+.content-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+/* Container utama */
+#container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+/* Logo */
+#container img.logo {
+  width: 240px;     /* ubah dari 150px ke 200px (atau sesuai kebutuhan) */
+  max-width: 100%; /* agar tidak overflow di layar kecil */
+  height: auto;     /* menjaga proporsi aspek */
+  margin-bottom: 12px; /* sedikit ruang bawah agar tidak terlalu rapat */
+}
+
+/* Nama aplikasi */
+#container .logo-text {
+  font-size: 26px;
+  color: white;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+/* Tagline */
+#container h2 {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: white;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+/* Card form */
+#container ion-card {
+  width: 100%;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Isi card */
+#container ion-card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ------------------ Bagian input / form ------------------ */
+
+/* Pastikan ion-item input dan password mengambil lebar penuh */
+ion-item.input-item,
+ion-item.password-item {
+  width: 100% !important;
+  --padding-start: 0;
+  --padding-end: 0;
+}
+
+/* Semua Input dasar */
+#container ion-input {
+  --background: #ffffff;
+  --border-color: transparent;
+  --box-shadow: none;
+  --highlight-color-focused: transparent !important;
+  --highlight-color-valid: transparent !important;
+  --highlight-color-invalid: transparent !important;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --padding-top: 14px;
+  --padding-bottom: 14px;
+  height: 56px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Hover input */
+#container ion-input:hover {
+  --background: #e1e8f5;
+}
+
+/* Fokus input */
+#container ion-input:focus-within {
+  --background: #e1e8f5;
+  border: none !important;
+  box-shadow: 0 0 6px rgba(31, 58, 100, 0.6) !important;
+}
+
+/* Teks yang diketik user (placeholder + input) */
+#container ion-input::part(native-input) {
+  font-size: 18px;  /* ukuran teks input */
+  color: #1F3A64 !important;
+  caret-color: #1F3A64 !important;
+}
+
+/* Styling placeholder (opsional) */
+#container ion-input::part(native-input)::placeholder {
+  font-size: 18px;
+  color: #777;  /* warna placeholder */
+}
+
+/* Label NIK dan Password — supaya tidak bold dan beri jarak */
+#container ion-label {
+  font-weight: normal !important;
+  color: #1F3A64 !important;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+/* Container custom untuk input + icon (password) */
+.password-item .input-with-icon {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Agar ion-input di dalam wrapper tersebut mengisi lebar penuh */
+.password-item .input-with-icon ion-input {
+  width: 100% !important;
+  padding-right: 40px;  /* ruang untuk icon agar teks tidak tertutup */
+  box-sizing: border-box;
+}
+
+/* Styling icon di dalam input */
+.password-item .input-with-icon .inside-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #1F3A64;
+  cursor: pointer;
+}
+
+/* ------------------ Tombol / Forgot ------------------ */
+
+/* Tombol Sign In */
+#container ion-button {
+  --background: #1F3A64;
+  --color: white;
+  margin-top: 10px;
+  border-radius: 20px;
+  --box-shadow: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover tombol */
+#container ion-button:hover {
+  --background: #284d87;
+  box-shadow: 0 4px 12px rgba(31, 58, 100, 0.4);
+}
+
+/* Forgot Password container */
+#container .forgot-password {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Link Forgot Password — biru dan tidak bold */
+#container .forgot-password a {
+  text-decoration: underline;
+  color: #1E90FF !important;
+  font-weight: normal !important;
+}

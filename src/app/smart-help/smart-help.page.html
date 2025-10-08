@@ -1,0 +1,58 @@
+<ion-header class="header-help">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Bantuan & Ketentuan</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="help-page-content ion-padding">
+  <div class="help-container">
+    <h1 class="page-title">Bantuan & Ketentuan Penggunaan</h1>
+
+    <section class="section">
+      <h2 class="help-title">📘 Tentang Aplikasi SmartPack</h2>
+      <p class="help-text">
+        Aplikasi <strong>SmartPack</strong> dirancang untuk memudahkan pengguna dalam mencatat, memantau,
+        dan mengelola aktivitas produksi dengan cara yang lebih efisien dan terstruktur. Semua data
+        yang dimasukkan akan tersimpan di sistem agar laporan dapat diakses kapan saja tanpa kehilangan
+        detail penting. Pastikan Anda memasukkan data secara akurat agar hasil analisis tetap valid
+        dan dapat membantu pengambilan keputusan yang lebih baik di masa mendatang.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="help-title">💡 Panduan Penggunaan</h2>
+      <ul class="help-list">
+        <li>Gunakan tombol <strong>“Detail”</strong> untuk melihat info lengkap suatu produk, termasuk status pengerjaan, catatan, dan histori.</li>
+        <li>Tekan tombol <strong>“Proses Pengerjaan”</strong> untuk memulai mencatat aktivitas kerja harian. Pastikan setiap langkah dicatat agar progres dapat dipantau dengan benar.</li>
+        <li>Gunakan ikon profil di kanan atas (di halaman yang menyediakan) untuk mengakses data akun, mengubah profil, atau logout.</li>
+        <li>Jika mengalami kesulitan dalam penggunaan aplikasi, coba cek koneksi internet dan lakukan refresh halaman sebelum melapor ke admin.</li>
+        <li>Pastikan perangkat memiliki ruang penyimpanan dan izin aplikasi untuk menyimpan data lokal jika diperlukan.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2 class="help-title">🛡️ Kebijakan Privasi & Keamanan</h2>
+      <p class="help-text">
+        Semua data yang Anda masukkan akan dienkripsi dan disimpan secara aman. Kami tidak akan membagikan
+        informasi pribadi Anda ke pihak ketiga tanpa persetujuan. Pastikan Anda menggunakan akun sendiri
+        dan tidak membagikan kredensial ke orang lain. Jika terdapat aktivitas mencurigakan pada akun Anda,
+        segera hubungi tim support.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="help-title">📞 Hubungi Kami</h2>
+      <p class="help-text">
+        Jika Anda memerlukan bantuan lebih lanjut atau memiliki pertanyaan, silakan hubungi kami melalui Whatsapp.
+        Kami siap membantu dan akan merespons secepat mungkin.
+      </p>
+      <ion-button expand="block" color="success" (click)="openWhatsApp()" class="btn-contact">
+        Hubungi Kami
+      </ion-button>
+    </section>
+    
+  </div>
+</ion-content>

@@ -1,0 +1,221 @@
+:host {
+  --ion-background-color: #1F3A64;
+}
+
+/* Latar belakang konten register */
+.register-page {
+  background: #1F3A64;
+  color: #fff;
+  padding: 0 20px;
+  overflow: visible;
+}
+
+/* Tombol kembali */
+.btn-back {
+  position: absolute;
+  top: 20px;
+  left: 12px;
+  z-index: 9999;
+  font-size: 35px;
+  color: #ffffff;
+  background: transparent;
+  border: none;
+  margin-bottom: 30px;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+}
+.btn-back:active {
+  opacity: 0.4;
+  transform: scale(0.95);
+}
+
+/* Container Form */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 40px 30px 30px; /* ⬅ tambahkan padding-top ekstra agar isi form tidak menempel */
+  background-color: #ffffff;
+  border-radius: 16px 16px 0 0; /* ⬅ hanya bagian atas membulat, tampak seperti "sheet" */
+  margin-top: 85px; /* ⬅ jarak dari tombol kembali dan header */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  overflow: visible;
+}
+
+/* Judul form */
+.title-inside-form {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.title-inside-form h1 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #1F3A64;
+  margin: 0;
+}
+
+/* Label setiap input */
+.form-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1F3A64;
+  margin-top: 10px;
+  margin-left: 4px;
+}
+
+/* Gaya dasar input (ion-input / ion-textarea) */
+.form-input {
+  --padding-start: 10px;
+  --padding-end: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #ffffff;
+  height: 44px;
+  font-size: 14px;
+  color: #1F3A64; /* semua input teks berwarna navy */
+  transition: all 0.3s ease;
+}
+
+/* Hover & fokus input */
+.form-input:hover {
+  border-color: #1F3A64;
+}
+.form-input:focus-within {
+  border-color: #1F3A64;
+  box-shadow: 0 0 4px rgba(31, 58, 100, 0.4);
+}
+
+/* Upload foto */
+.upload-box {
+  width: 120px;
+  height: 160px;
+  border: 2px dashed #1F3A64;
+  border-radius: 8px;
+  background-color: #f4f4f4;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.preview-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.upload-note {
+  font-size: 12px;
+  color: #1F3A64;
+  margin-top: 4px;
+  text-align: left;
+}
+
+/* Teks contoh input */
+.example-input {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: -5px;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+/* Keterangan wajib diisi */
+.required {
+  color: #e63946;
+  font-weight: bold;
+}
+.required-note {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Tombol REGISTER */
+.btn-register {
+  --background: #1F3A64;
+  --color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 16px;
+  height: 48px;
+  border-radius: 999px;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(31, 58, 100, 0.4);
+  transition: all 0.3s ease;
+}
+.btn-register:hover {
+  --background: #284d87;
+  box-shadow: 0 6px 14px rgba(31, 58, 100, 0.5);
+}
+
+/* ====== Bagian password & konfirmasi input dengan ikon di dalam ====== */
+/* Wrapper container untuk overlay icon pada item password */
+/* ====== Password & Konfirmasi Password ====== */
+
+ion-item.password-item {
+  --background: transparent;
+  --border-width: 0;
+  box-shadow: none !important;
+  padding: 0;
+  width: 100% !important;
+  margin-bottom: 18px;
+  display: block; /* ubah dari flex ke block agar label di atas input */
+}
+
+/* Label */
+.password-item ion-label {
+  color: #1F3A64;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex; /* ubah ke inline-flex agar teks & bintang 1 baris */
+  align-items: center;
+  gap: 4px; /* jarak kecil antara teks dan bintang */
+  margin-bottom: 6px; /* jarak bawah ke input */
+  text-align: left;
+}
+
+/* Bintang merah */
+.password-item ion-label .required {
+  color: red;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 1; /* hindari geser vertikal */
+  position: relative;
+  top: -1px; /* sedikit naik biar sejajar atas huruf terakhir */
+}
+
+
+/* Wrapper input + ikon */
+.password-item .input-with-icon {
+  position: relative;
+  width: 100%;
+}
+
+/* Input field */
+.password-item .input-with-icon ion-input {
+  --color: #1F3A64;
+  --placeholder-color: #1F3A64;
+  --padding-start: 12px;
+  --padding-end: 44px; /* ruang untuk ikon mata */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 15px;
+  height: 50px; /* <== perbesar tinggi input */
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Icon mata */
+.password-item .input-with-icon .inside-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #1F3A64;
+  cursor: pointer;
+}

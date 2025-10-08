@@ -1,0 +1,25 @@
+<ion-tab-bar slot="bottom">
+  <!-- Home -->
+  <ion-tab-button [class.tab-selected]="activeTab === 'home'" (click)="setActiveTab('home')">
+    <ion-icon name="home"></ion-icon>
+    <ion-label>Home</ion-label>
+  </ion-tab-button>
+
+  <!-- Daftar WO -->
+  <ion-tab-button [class.tab-selected]="activeTab === 'daftar-wo'" (click)="setActiveTab('daftar-wo')">
+    <ion-icon name="list"></ion-icon>
+    <ion-label>Daftar WO</ion-label>
+  </ion-tab-button>
+
+  <!-- SOP Packing -->
+  <ion-tab-button [class.tab-selected]="activeTab === 'sop-packing'" (click)="setActiveTab('sop-packing')">
+    <ion-icon name="document"></ion-icon>
+    <ion-label>SOP Packing</ion-label>
+  </ion-tab-button>
+
+  <!-- Laporan Harian -->
+  <ion-tab-button [class.tab-selected]="activeTab === 'laporan-harian'" (click)="setActiveTab('laporan-harian')">
+    <ion-icon name="document-text"></ion-icon>
+    <ion-label>Laporan Harian</ion-label>
+  </ion-tab-button>
+</ion-tab-bar>

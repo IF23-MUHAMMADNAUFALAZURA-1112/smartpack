@@ -1,0 +1,64 @@
+  <ion-content [fullscreen]="true" class="login-background">
+
+    <!-- Tombol Kembali -->
+    <ion-button fill="clear" class="btn-back" (click)="goBack()" shape="round">
+      <ion-icon name="arrow-back-outline" slot="icon-only"></ion-icon>
+    </ion-button>
+
+    <div class="content-wrapper">
+      <div id="container" class="fade-slide-in">
+
+        <!-- Logo -->
+        <img src="assets/img/SMARTPACK.png" alt="Logo" class="logo" />
+        <h2>Packing Smart, Quantity Tepat</h2>
+
+        <ion-card>
+          <ion-card-content>
+
+            <!-- Input NIK -->
+            <ion-item lines="none" class="input-item">
+              <ion-label position="stacked">NIK</ion-label>
+              <ion-input
+                type="text"
+                maxlength="16"
+                placeholder="Enter NIK"
+                [(ngModel)]="credentials.nik">
+              </ion-input>
+            </ion-item>
+
+          <ion-item lines="none" class="password-item">
+    <ion-label position="stacked">Password</ion-label>
+    <div class="input-with-icon">
+      <ion-input
+        [type]="showPassword ? 'text' : 'password'"
+        maxlength="15"
+        placeholder="Enter Password"
+        [(ngModel)]="credentials.password">
+      </ion-input>
+      <ion-icon
+        [name]="showPassword ? 'eye-off' : 'eye'"
+        (click)="toggleShowPassword()"
+        class="inside-icon">
+      </ion-icon>
+    </div>
+  </ion-item>
+
+
+            <!-- Tombol Login -->
+            <ion-button expand="block" shape="round" (click)="onLogin()" [disabled]="isLoading">
+              <ion-spinner *ngIf="isLoading" name="crescent" class="login-spinner"></ion-spinner>
+              <span *ngIf="!isLoading">Sign In</span>
+            </ion-button>
+
+         <!-- lupa password -->
+<div class="smart-forgot">
+  <ion-text color="primary" (click)="goForgot()">Forgot password?</ion-text>
+</div>
+
+
+          </ion-card-content>
+        </ion-card>
+
+      </div>
+    </div>
+  </ion-content>

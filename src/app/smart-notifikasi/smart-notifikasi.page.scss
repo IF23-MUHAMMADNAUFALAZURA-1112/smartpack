@@ -1,0 +1,54 @@
+.custom-toolbar {
+  --background: #0b2447; /* biru navy seperti dashboard */
+  color: #fff;
+}
+
+.header-title {
+  color: #fff;
+  font-weight: 700;
+}
+
+.notification-content {
+  --background: #f4f6fb;
+  padding: 10px;
+}
+
+ion-item {
+  margin: 10px 0;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: 0.2s ease;
+}
+
+ion-item h2 {
+  font-weight: 600;
+  color: #0b2447;
+}
+
+ion-item p {
+  color: #555;
+  margin: 4px 0;
+}
+
+ion-item small {
+  color: #888;
+}
+
+ion-item.selected {
+  border-left: 5px solid #0b2447;
+  background: #e6f0ff;
+}
+
+ion-item.read {
+  opacity: 0.7;
+}
+
+.selection-bar {
+  display: flex;
+  justify-content: space-around;
+  background: #e3eafc;
+  padding: 8px 0;
+  border-radius: 10px;
+  margin: 10px;
+}

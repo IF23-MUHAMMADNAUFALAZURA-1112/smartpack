@@ -1,0 +1,70 @@
+/* Menambahkan warna latar belakang untuk header */
+ion-header {
+  --background: #1F3A64;  // Mengubah latar belakang header menjadi #1F3A64
+}
+
+ion-toolbar {
+  --background: #1F3A64;  // Menambahkan warna latar belakang toolbar agar senada
+  color: white;            // Mengubah warna teks toolbar menjadi putih
+}
+
+ion-title {
+  color: white !important;  // Mengubah warna teks judul menjadi putih
+  font-family: 'Archivo Black', sans-serif !important;  // Menggunakan font Archivo Black
+  font-weight: bold;  // Menambah ketebalan font untuk judul
+}
+
+/* Styling untuk tombol dan ikon */
+ion-button {
+  color: white;  // Menjamin bahwa tombol dalam toolbar juga memiliki teks berwarna putih
+}
+
+ion-icon {
+  color: white;  // Mengubah warna ikon menjadi putih agar kontras dengan background
+}
+
+/* Styling tambahan untuk elemen di dalam ion-content */
+.sop-content {
+  --background: #f4f4f4;  // Menetapkan background content menjadi warna netral agar tidak terlalu kontras
+  padding: 10px;
+}
+
+/* Penataan elemen input agar selaras dengan tema warna */
+ion-searchbar {
+  --background: #ffffff;
+  --border-radius: 10px;
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ion-select {
+  --background: #ffffff;
+  --border-radius: 10px;
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling untuk card SOP */
+.sop-card {
+  margin-top: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sop-card-header {
+  background-color: #1F3A64;  // Set background color header card menjadi #1F3A64
+  color: white;  // Set warna teks header card menjadi putih
+}
+
+.sop-card-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.sop-card-content {
+  padding: 10px;
+  color: #333;
+}
+
+.dim-limit small {
+  color: #1F3A64;
+  font-size: 14px;
+}

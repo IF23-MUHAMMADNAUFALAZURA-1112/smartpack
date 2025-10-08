@@ -1,0 +1,48 @@
+  <ion-header>
+    <ion-toolbar color="primary" class="custom-toolbar">
+      <ion-buttons slot="start">
+        <ion-button (click)="goBack()">
+          <ion-icon name="arrow-back-outline" color="light"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title class="header-title">DAFTAR SOP</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="sop-content">
+    <!-- Search dan Filter -->
+    <div class="search-filter">
+      <ion-searchbar
+        [(ngModel)]="searchTerm"
+        placeholder="Cari berdasarkan nama atau kode part..."
+        show-clear-button="always"
+      ></ion-searchbar>
+
+      <ion-select [(ngModel)]="selectedType" interface="popover" placeholder="Filter Jenis">
+        <ion-select-option value="">Semua Jenis</ion-select-option>
+        <ion-select-option *ngFor="let type of partTypes" [value]="type">{{ type }}</ion-select-option>
+      </ion-select>
+    </div>
+
+    <!-- Daftar SOP -->
+    <ion-list>
+      <ion-card *ngFor="let item of filteredSOPs()" class="sop-card">
+        <img [src]="item.image" alt="Part Image" class="sop-image" />
+
+        <ion-card-header>
+          <ion-card-title>{{ item.partName }}</ion-card-title>
+          <ion-card-subtitle>Kode: {{ item.partNumber }}</ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content>
+          <p><strong>Jenis:</strong> {{ item.type }}</p>
+          <p>
+            <strong>Dimensi:</strong>
+            P: {{ item.dimension.length }} mm,
+            L: {{ item.dimension.width }} mm,
+            T: {{ item.dimension.height }} mm
+          </p>
+
+          <div class="dim-limit">
+            <small>Batas Atas: {{ item.limits.upper }} mm</small>
+            <small>Batas Bawah

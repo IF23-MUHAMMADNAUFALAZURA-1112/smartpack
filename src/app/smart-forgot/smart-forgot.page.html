@@ -1,0 +1,31 @@
+<!-- Tombol kembali -->
+<div class="btn-back" (click)="goBack()">
+    <ion-icon name="arrow-back-outline"></ion-icon>
+</div>
+
+<ion-content [fullscreen]="true" class="forgot-password-background">
+    <div class="content-wrapper">
+        <div id="container" class="fade-slide-in">
+
+
+            <img src="assets/img/SMARTPACK.png" alt="Logo" class="logo" />
+            <h2>Packing Smart, Quantity Tepat</h2>
+
+            <ion-card>
+                <ion-card-content>
+
+                    <ion-input label="Email" label-placement="floating" fill="solid" placeholder="Enter your email"
+                        type="email" [(ngModel)]="email">
+                    </ion-input>
+
+                    <ion-button expand="block" shape="round" (click)="submitForgotPassword()" [disabled]="isLoading">
+                        <ion-spinner *ngIf="isLoading" name="crescent" class="forgot-password-spinner"></ion-spinner>
+                        <span *ngIf="!isLoading">Send Reset Link</span>
+                    </ion-button>
+
+                </ion-card-content>
+            </ion-card>
+
+        </div>
+    </div>
+</ion-content>

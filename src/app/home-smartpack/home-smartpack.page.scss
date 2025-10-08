@@ -1,0 +1,137 @@
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.home-content {
+  --background: #1F3A64; /* biru navy dari logo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+}
+
+.btn-back {
+  position: absolute;
+  top: 24px;
+  left: 16px;
+  z-index: 10;
+  font-size: 32px;
+  color: #ffffff; 
+}
+
+.container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.anim {
+  animation: slideUpFadeIn 2s ease-out forwards;
+}
+
+@keyframes slideUpFadeIn {
+  0% { transform: translateY(100%); opacity: 0; }
+  100% { transform: translateY(0);   opacity: 1; }
+}
+
+/* LOGO */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 12px auto; /* lebih presisi dengan teks */
+}
+
+.logo {
+  width: 320px;   /* diperbesar supaya jelas */
+  max-width: 85%; /* tetap responsif */
+  height: auto;
+  display: block;
+}
+
+/* Responsif */
+@media (max-width: 480px) {
+  .logo {
+    width: 240px; /* hp kecil */
+  }
+}
+
+@media (min-width: 768px) {
+  .logo {
+    width: 340px; /* tablet/desktop */
+  }
+}
+
+/* NAMA APP (opsional kalau dipakai) */
+.app-name {
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 32px;        /* lebih besar agar seimbang dengan logo */
+  color: #fff;
+  margin-top: 8px;        /* presisi dengan logo */
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* TAGLINE */
+.tagline {
+  font-size: 18px;        /* lebih besar agar terlihat seimbang */
+  color: #dbe3f0;
+  margin-top: 4px;        /* dekat dengan app-name */
+  text-align: center;
+}
+
+/* BUTTON WRAPPER */
+.action-buttons {
+  width: 100%;
+}
+
+.login-button {
+  display: block;
+  margin: 20px auto;
+  width: 70%;
+  max-width: 250px;
+  --border-radius: 20px;
+  --background: #ffffff;
+  --color: #1F3A64;
+  font-weight: bold;
+  transition: all 0.3s ease; 
+}
+
+.login-button:hover {
+  --background: #2d4d7a;
+  --color: #ffffff;
+  transform: scale(1.05);
+}
+
+.signup-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+  color: #fff;
+}
+
+.signup-text span {
+  font-size: 12px;
+}
+
+.signup-text ion-button {
+  --padding-start: 0;
+  --padding-end: 0;
+  --min-height: 0;
+  --min-width: 0;
+  --color: #ffffff;
+  font-size: 12px;
+}

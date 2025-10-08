@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+* {
+  font-family: 'Archivo Black', sans-serif;
+}
+
+/* === HEADER === */
+.header-custom {
+  background-color: #1F3A64;
+  color: #fff;
+
+  ion-toolbar {
+    --background: #1F3A64;
+    --color: #fff;
+  }
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 18px;
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      .logo {
+        height: 68px;
+      }
+      .lang-select {
+  --background: transparent;
+  --color: #fff;
+  --padding-start: 0;
+  --padding-end: 0;
+  font-size: 0.95rem;
+  width: 68px;
+  text-align: center;
+
+  ion-select-option {
+    color: #1F3A64 !important;
+  }
+
+  &::part(icon) {
+    color: #fff;
+  }
+}
+
+    }
+
+    .header-icons {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      ion-icon {
+        font-size: 2.4rem;
+        color: #fff;
+        transition: transform 0.2s ease;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(1.15);
+        }
+      }
+
+      .icon-help {
+        color: #ffce00;
+      }
+
+      .icon-profile {
+        color: #fff;
+      }
+    }
+  }
+}
+
+/* === DASHBOARD CONTENT === */
+.dashboard-content {
+  --background: #f8f9fd;
+  padding: 16px;
+}
+
+/* === STATISTIK (versi baru) === */
+.stats-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 10px 8px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.stat-item {
+  flex: 1 1 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1F3A64;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.stat-card {
+  background-color: #1F3A64;
+  color: #fff;
+  border-radius: 16px;
+  padding: 14px 0;
+  width: 100%;
+  max-width: 200px;
+  transition: transform 0.25s ease-in-out;
+}
+
+.stat-card:hover {
+  transform: scale(1.05);
+}
+
+.stat-card ion-card-content {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+/* Warna dinamis berdasarkan total kerja */
+.stat-item.yellow .stat-card {
+  background-color: #ffb703;
+  color: #1F3A64;
+}
+
+.stat-item.green .stat-card {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.stat-item.red .stat-card {
+  background-color: #e63946;
+  color: #fff;
+}
+
+
+/* Responsif Statistik */
+@media (max-width: 600px) {
+  .stats-wrapper {
+    justify-content: center;
+  }
+
+  .stat-item {
+    flex: 0 0 45%;
+  }
+}
+
+@media (max-width: 400px) {
+  .stat-item {
+    flex: 0 0 100%;
+  }
+}
+
+/* === PRODUCT LIST === */
+.wo-list {
+  margin-top: 20px;
+}
+
+.wo-card {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+  transition: 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+
+  ion-grid {
+    padding: 10px;
+  }
+
+  .product-image {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .product-name {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #1F3A64;
+    margin-bottom: 6px;
+  }
+
+  .part-number {
+    font-size: 0.85rem;
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  p {
+    font-size: 0.8rem;
+    margin: 3px 0;
+    color: #444;
+  }
+
+  .status {
+    font-weight: bold;
+    text-transform: capitalize;
+
+    &.selesai {
+      color: #28a745;
+    }
+    &.proses {
+      color: #ffc107;
+    }
+    &.partial {
+      color: #fd7e14;
+    }
+  }
+}
+/* ==== POPOVER Profile==== */
+ion-popover {
+  --width: 200px;
+  --border-radius: 12px;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  --backdrop-opacity: 0.2;
+}
+
+ion-list {
+  padding: 0;
+  margin: 0;
+}
+
+ion-item {
+  --background: #fff;
+  --color: #1f3a64;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+ion-item:hover {
+  --background: #f0f4ff;
+}
+
+ion-item ion-icon {
+  color: #1f3a64;
+  margin-right: 6px;
+}
+
+.icon-profile {
+  font-size: 28px;
+  cursor: pointer;
+  color: #ffffff;
+  transition: 0.2s;
+}
+
+.icon-profile:hover {
+  transform: scale(1.1);
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.icon-help {
+  font-size: 26px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+
+
+/* === ACTION BUTTONS === */
+.action-buttons {
+  padding: 10px 16px 16px;
+
+  ion-button {
+    border-radius: 10px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    --border-width: 1px;
+    --box-shadow: none;
+
+    &:first-child {
+      --color: #1F3A64;
+      --border-color: #1F3A64;
+    }
+
+    &:last-child {
+      --background: #28a745;
+      --color: #fff;
+    }
+  }
+}
